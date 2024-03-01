@@ -1,0 +1,65 @@
+﻿@model WebApplication5.Models.MVVM.Portfolio
+@{
+    ViewData["Title"] = "PortfolioDelete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>MÜŞTERİ SİLME EKRANI
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-scrollable">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    MÜŞTERİ ID
+                                </th>
+                                <th>
+                                    MÜŞTERİ İSMİ
+                                </th>
+
+                                <th>
+                                    LOGOSU
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <thead style="background-color:grey;color:white;">
+                            <tr>
+                                <th>
+                                    @Html.DisplayFor(model => model.PortfolioID)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(model => model.PortfolioName)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(model => model.WebAddress)
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                    </table>
+                    <form asp-action="PortfolioDelete" method="post">
+                        <input type="hidden" asp-for="PortfolioID" />
+                        <input type="submit" value="SİL" class="btn btn-danger" onclick="return confirm('SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ?')" />
+                        <a asp-action="Index" class="btn btn-primary">ANA SAYFAYA GİT</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- END SAMPLE TABLE PORTLET-->
+    </div>
+</div>
+<!-- END PAGE CONTENT-->
+<!-- END CONTENT -->

@@ -1,0 +1,203 @@
+﻿@model WebApplication5.Models.MVVM.MainPageModel
+@{
+    ViewData["Title"] = "AboutUs";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+
+      </header>
+<!-- Header section end -->
+<!-- Mobile Menu start -->
+<div class="mobile__menu">
+    <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<!-- Mobile Menu end -->
+<!-- Breadcrumb section start -->
+<section class="breadcrumb__area">
+    <div class="container">
+        <div class="breadcrumb__content">
+            <p class="cxu-words">Ana Sayfa - <a href="about-us.html">Hakkımızda</a></p>
+            <h1 class="breadcrumb__title cxu-chars">Hakkımızda</h1>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- About area start -->
+<section class="about-inner__area pt-140 pb-140">
+    <div class="container">
+        <div class="about-inner__wrapper">
+            <div class="about-inner__left">
+                <img src="~/imgs/about/3.png" alt="Image" class="cxu-fade" data-ease="back" data-speed="0.9">
+            </div>
+            <div class="about-inner__right">
+                <h2 class="title cxu-words">Uzman ekibimizle dijital varlığınızı güçlü stratejilerle oluşturuyor ve varlığını koruyoruz</h2>
+                <p class="cxu-lines">
+                    Grafik tasarım, web tasarım, yazılım hizmeti ve e-ticaret danışmanlığı ihtiyaçlarınızda kaliteli, detaylı, yaratıcı fikirler ve kalıcı çözümler sunuyoruz.
+                </p>
+                <a href="tel:@ViewBag.telephone" class="cxu-btn-primary cxu-fade" data-ease="bounce">
+                    Bizi Arayın <i class="fa-solid fa-phone-volume"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About area end -->
+<!-- Counter area start -->
+<section class="counter__area-4 pt-140 pb-140">
+    <div class="container">
+        <div class="counter__content">
+            <div class="counter__list-4">
+                <div class="counter__item style-3 cxu-fade" data-ease="back">
+                    <div class="counter-active number">25+</div>
+                    <p>Çözüm Ortağımız </p>
+                </div>
+                <div class="counter__item style-3 cxu-fade" data-ease="back">
+                    <div class="counter-active number">7k+</div>
+                    <p>Bizimle Çalışan Global Markalar</p>
+                </div>
+                <div class="counter__item style-3 cxu-fade" data-ease="back">
+                    <div class="counter-active number">56+</div>
+                    <p>Yaratıcı Projeler</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Counter area end -->
+<!-- Service section start -->
+<section class="service__area-2 pt-140 pb-140" id="services">
+    <div class="container">
+        <div class="service__top-2">
+            <h2 class="sec-title cxu-words">Hizmetlerimiz</h2>
+        </div>
+
+        <div class="cxu__service style-2">
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i1.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/EcommerceDetail">E-Ticaret <br> Danışmanlığı </a></h3>
+                <p>Alanında uzman ekibimizden e-ticaret danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="/Home/EcommerceDetail">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="0.6">
+                <div class="icon">
+                    <img src="~/imgs/service/i2.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/WebDesignDetail">Web <br> Tasarım</a></h3>
+                <p>Alanında uzman ekibimizden web tasarım hizmeti alın.</p>
+                <div class="link">
+                    <a href="/Home/WebDesignDetail">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="0.8">
+                <div class="icon">
+                    <img src="~/imgs/service/i3.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/SoftwareDevelopmentDetail">Yazılım <br> Geliştirme</a></h3>
+                <p>Alanında uzman ekibimizden yazılım geliştirme hizmeti alın.</p>
+                <div class="link">
+                    <a href="/Home/SoftwareDevelopmentDetail">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="1">
+                <div class="icon">
+                    <img src="~/imgs/service/i4.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/GraphicDesignDetail">Grafik <br> Tasarım</a></h3>
+                <p>Alanında uzman ekibimizden grafik tasarım hizmeti alın.</p>
+                <div class="link">
+                    <a href="/Home/GraphicDesignDetail">Daha Fazla Bilgi<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i5.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/SocialMediaDetail">Sosyal Medya <br> Yönetimi</a></h3>
+                <p>Alanında uzman ekibimizden sosyal medya yönetimi danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="/Home/SocialMediaDetail">Daha Fazla Bilgi<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i6.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="/Home/SEODetail">SEO  <br> Yönetimi</a></h3>
+                <p>Alanında uzman ekibimizden SEO yönetimi danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="/Home/SEODetail">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service section end -->
+<!-- Award section start -->
+@* <section class="award__area pt-140 pb-140">
+    <div class="container">
+        <div class="award__top">
+            <h3 class="sec-title cxu-words">Son Yaptığımız <br> Websiteleri </h3>
+        </div>
+
+        <div class="award__list">
+            <div class="award__item cxu-fade" data-ease="back">
+                <div class="number">01</div>
+                <h4 class="title">awwwards.com</h4>
+                <p>01 Jan 2020 <span>/</span>Runner Up</p>
+                <div class="award-img">
+                    <img src="~/imgs/award/1.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="award__item cxu-fade" data-ease="back">
+                <div class="number">02</div>
+                <h4 class="title">awwwards.com</h4>
+                <p>01 Jan 2021 <span>/</span>Winner</p>
+                <div class="award-img">
+                    <img src="~/imgs/award/1.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="award__item cxu-fade" data-ease="back">
+                <div class="number">03</div>
+                <h4 class="title">awwwards.com</h4>
+                <p>01 March 2021 <span>/</span>Honorable mention</p>
+                <div class="award-img">
+                    <img src="~/imgs/award/1.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="award__item cxu-fade" data-ease="back">
+                <div class="number">04</div>
+                <h4 class="title">csswinner.com</h4>
+                <p>01 Jan 2022 <span>/</span>Winner</p>
+                <div class="award-img">
+                    <img src="~/imgs/award/1.jpg" alt="Image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+ *@<!-- Award section end -->
+<!-- Team area start -->
+<!-- Team area end -->
+<!-- CTA section start -->
+<section class="cta__area cta__area-2 pt-150 pb-150">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="sec-title cxu-words">GELİN, BİRLİKTE İNANILMAZ PROJELERE İMZA ATALIM</h2>
+            <a href="contact.html" class="cxu-btn-primary cxu-fade" data-ease="bounce">
+                Bizimle İletişime Geçin <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <img src="~/imgs/shape/cta.png" alt="Shape" class="shape" data-speed="0.89">
+    <img src="~/imgs/shape/cta-2.png" alt="Shape" class="shape-2" data-speed="0.9">
+    <img src="~/imgs/shape/cta-3.png" alt="Shape" class="shape-3" data-speed="0.95">
+    <img src="~/imgs/shape/cta-4.png" alt="Shape" class="shape-4">
+</section>
+<!-- CTA section end -->

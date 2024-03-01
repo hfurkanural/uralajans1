@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "EcommerceDetail";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+<!-- Mobile Menu start -->
+<div class="mobile__menu">
+    <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<!-- Mobile Menu end -->
+<!-- Breadcrumb section start -->
+<section class="breadcrumb__area" style="background-image: url(~/imgs/breadcrumb/service-details.jpg);">
+    <div class="container">
+        <div class="breadcrumb__content">
+            <p class="cxu-words">Ana Sayfa - Hizmet Detayları</p>
+            <h1 class="breadcrumb__title cxu-chars">Hizmet Detayları</h1>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Service details start -->
+<section class="service__details-area pt-140">
+    <div class="container">
+        <div class="service__details-top">
+            <h1 class="title cxu-words">E-Ticaret Danışmanlığı Detayları</h1>
+            <img src="~/imgs/service/ecommerce1.jpg" alt="Image" data-speed="0.95" style="border-radius:20px">
+        </div>
+
+        <div class="service__details-wrapper">
+            <div class="service__details-content cxu-fade" data-ease="back">
+                <h2>Sektörünüzde lider yapacak kapatisede tecrübe</h2>
+                <p>
+                    Yılların kanıtlanmış tecrübesi ve bilgi birikimi ile e-ticaret alanında öne geçin! E-ticaret ile ilgili tüm ihtiyaçlarınızda
+                    yanınızdayız.
+                </p>
+                <h2>Süreç Detayları</h2>
+                <p>
+                    İster sıfırdan, isterseniz de halihazırda var olan e-ticaret websitenizi profesyonel yaklaşımımız ile aramalarda
+                    en üst sıraya taşıyoruz. Bunun yanında size grafik tasarım, web tasarım ve yazılım hizmeti de sunarak hem sizin hem de
+                    e-ticaret müşterilerinizin kusursuz bir alışveriş deneyimi yaşamasına ve sizin ve işinizi kolaylaştırmayı amaç ediniyoruz.
+                </p>
+            </div>
+            <div class="service__details-sidebar cxu-fade" data-ease="back" data-delay="0.5">
+                <div class="book-call">
+                    <img src="~/imgs/service/service-details-3.jpg" alt="Image">
+                    <h3 class="title">Hemen Bizi Arayın!</h3>
+                    <a href="tel:@ViewBag.phonenumber" class="cxu-btn-primary">
+                        Bize Ulaşın <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service details end -->
+<!-- Full Image area start -->
+<div class="service__full-image">
+    <img src="~/imgs/service/ecommerce2.jpg" alt="Image" data-speed="0.8">
+</div>
+<!-- Full Image area end -->
+<!-- Related Service section start -->
+<section class="service__related-area pt-140 pb-140">
+    <div class="container">
+        <div class="service__related-wrapper">
+            <div class="top">
+                <h2 class="sec-title cxu-words">Diğer <br> hizmetlerimiz.</h2>
+                <p class="cxu-lines">
+                    E-ticaret danışmanlığı yanında grafik tasarım, web tasarım ve yazılım hizmeti ile de yanınızdayız.
+                </p>
+                <a href="/Home/Contact" class="cxu-btn-primary cxu-fade" data-ease="back">Bize Ulaşın</a>
+            </div>
+
+            <div class="cxu__service style-2">
+                <div class="service-item cxu-fade" data-ease="back">
+                    <div class="icon">
+                        <img src="~/imgs/service/i1.png" alt="Icon">
+                    </div>
+                    <h3 class="title">Web <br> Tasarım</h3>
+                    <p>Web tasarım hizmetlerimiz için ulaşın.</p>
+                    <div class="link">
+                        <a href="/Home/WebDesignDetail">Daha Fazla <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-item cxu-fade" data-ease="back">
+                    <div class="icon">
+                        <img src="~/imgs/service/i2.png" alt="Icon">
+                    </div>
+                    <h3 class="title">Yazılım <br> Geliştirme</h3>
+                    <p>Yazılım Geliştirme hizmetlerimiz için ulaşın.</p>
+                    <div class="link">
+                        <a href="/Home/SoftwareDevelopmentDetail">Daha fazla <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Related Service section end -->
+<!-- CTA section start -->
+<section class="cta__area cta__area-2 pt-150 pb-150">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="sec-title cxu-words">GELİN, BERABER İNANILMAZ PROJELERE İMZA ATALIM!</h2>
+            <a href="/Home/Contact" class="cxu-btn-primary cxu-fade" data-ease="bounce">
+                Yeni Bir Proje Başlatın <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <img src="~/imgs/shape/cta.png" alt="Shape" class="shape" data-speed="0.94">
+    <img src="~/imgs/shape/cta-2.png" alt="Shape" class="shape-2" data-speed="0.95">
+    <img src="~/imgs/shape/cta-3.png" alt="Shape" class="shape-3" data-speed="0.9">
+    <img src="~/imgs/shape/cta-4.png" alt="Shape" class="shape-4">
+</section>
+<!-- CTA section end -->

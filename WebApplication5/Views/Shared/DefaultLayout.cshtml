@@ -1,0 +1,243 @@
+﻿
+@{
+    UralAjansContext context = new UralAjansContext();
+    
+    string email = context.Settings.FirstOrDefault().Email;
+    string phone = context.Settings.FirstOrDefault().PhoneNumber;
+    string address = context.Settings.FirstOrDefault().Address;
+    string facebook = context.Settings.FirstOrDefault().Facebook;
+    string twitter = context.Settings.FirstOrDefault().Twitter;
+    string linkedin = context.Settings.FirstOrDefault().LinkedIn;
+    string instagram = context.Settings.FirstOrDefault().Instagram;
+    string light = "light";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+     <title>@ViewBag.Baslik</title>
+                        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- Fav Icon -->
+            <link rel="icon" type="image/x-icon" href="~/imgs/logo/favicon.png">
+
+            <link rel="stylesheet" href="~/css/all.min.css">
+            <link rel="stylesheet" href="~/css/bootstrap.min.css">
+            <link rel="stylesheet" href="~/css/swiper-bundle.min.css">
+            <link rel="stylesheet" href="~/css/meanmenu.min.css">
+            <link rel="stylesheet" href="~/css/magnific-popup.css">
+            <link rel="stylesheet" href="~/css/master.css">
+            <link rel="stylesheet" href="~/style.css">
+
+
+</head>
+<body class="dark">
+    <div>
+        <!DOCTYPE html>
+        <html lang="tr">
+
+        <body class="dark">
+            <!-- Switcher Area Start -->
+            <div class="switcher__area">
+                <ul class="mode">
+                    <li><a href="/Home/@ViewBag.Title" class="active">Dark</a></li>
+                    <li><a href="/Home/@ViewBag.Title@light">light</a></li>
+                </ul>
+                <div class="switcher__btn mode-type">
+                    <button class="active" data-mode="ltr">LTR</button>
+                    <button data-mode="rtl">RTL</button>
+                </div>
+            </div>
+            <!-- Switcher Area End -->
+            <!-- Go to Top -->
+            <button class="cxu--go-top">
+                <span class="icon-1"><img src="~/imgs/shape/go-top.png" alt="Icon"></span>
+                <span class="icon-2"><img src="~/imgs/shape/go-top.png" alt="Icon"></span>
+            </button>
+
+
+            <!-- Preloader -->
+            <div class="cxu-preloader">
+                <div class="wrapper">
+                    <div class="lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                        <span class="line line-4"></span>
+                        <span class="line line-5"></span>
+                        <span class="line line-6"></span>
+                        <span class="line line-7"></span>
+                        <span class="line line-8"></span>
+                        <span class="line line-9"></span>
+                    </div>
+                    <div class="text">Loading...</div>
+                </div>
+            </div>
+
+
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+
+                    <!-- Header section start -->
+                    <header class="header__area-2">
+                        <div class="header__wrapper-2">
+                            <div class="header__logo">
+                                <a href="/Home/Index"><img src="~/imgs/logo/logo-2.png" alt="Logo"></a>
+                            </div>
+                            <div class="header__menu-2">
+                                <nav class="main-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="/Home/Index">Ana Sayfa</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/Home/AboutUs">Hakkımızda</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Home/Services">Hizmetlerimiz</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Home/Portfolio">Portfolyo</a>
+                                        </li>
+                                        <li><a href="/Home/Contact">İletişim</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header__others-2">
+                                <button class="open__menu"><img src="~/imgs/logo/hamburger-2.png" alt="Icon"></button>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Header section end -->
+                    @RenderBody()
+
+
+                    <footer class="footer__area">
+                        <div class="footer__top-wrapper">
+                            <div class="container">
+                                <div class="footer__top">
+                                    <div class="footer__logo">
+                                        <img src="~/imgs/logo/logo-2.png" alt="Logo">
+                                    </div>
+                                    <div class="footer__widget">
+                                        <h3 class="footer__title">Biz Kimiz</h3>
+                                        <ul class="footer__menu">
+                                            <li><a href="/Home/AboutUs">Hakkımızda</a></li>
+                                            <li><a href="/Home/Portfolio">Portfolyo</a></li>
+                                            <li><a href="/Home/Contact">İletişim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__widget">
+                                        <h3 class="footer__title">Hizmetlerimiz</h3>
+                                        <ul class="footer__menu">
+                                            <li><a href="/Home/GraphicDesignDetail">Grafik Tasarım</a></li>
+                                            <li><a href="/Home/SoftwareDevelopmentDetail">Yazılım Hizmeti</a></li>
+                                            <li><a href="/Home/WebDesignDetail">Web Tasarım</a></li>
+                                            <li><a href="/Home/EcommerceDetail">E-Ticaret Danışmanlığı</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__newsletter">
+                                       @await Html.PartialAsync("~/Views/Home/Mailing.cshtml")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__btm-wrapper">
+                            <div class="container">
+                                <div class="footer__btm">
+                                    <div class="footer__contact">
+                                        <h4 class="title">Bize E-Posta Gönderin</h4>
+                                        <a href="mailto:@email">@email</a>
+                                    </div>
+                                    <div class="footer__contact">
+                                        <h4 class="title">Bizi Arayın</h4>
+                                        <a href="tel:@phone">@phone</a>
+                                    </div>
+                                    <div class="footer__contact">
+                                        <h4 class="title">Adresimiz</h4>
+                                        <a>@address</a>
+                                    </div>
+                                    <div class="footer__social-wrapper">
+                                        <ul class="footer__social">
+                                            <li>
+                                                <a href="http://www.@facebook" target="_blank">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="http://www.@twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li>
+                                                <a href="http://www.@linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.@instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- Footer section end -->
+
+
+                </div>
+            </div>
+
+
+
+            <script src="~/js/jquery-3.6.1.min.js"></script>
+            <script src="~/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/swiper-bundle.min.js"></script>
+            <script src="~/js/jquery.meanmenu.min.js"></script>
+            <script src="~/js/counter.js"></script>
+            <script src="~/js/gsap.min.js"></script>
+            <script src="~/js/ScrollSmoother.min.js"></script>
+            <script src="~/js/ScrollTrigger.min.js"></script>
+            <script src="~/js/SplitText.min.js"></script>
+            <script src="~/js/jquery.magnific-popup.min.js"></script>
+            <script src="~/js/main.js"></script>
+
+        </body>
+
+
+
+</div>
+</body>
+</html>
+
+<script>
+    $("#search").keyup(function () {
+        var id = $("#search").val();
+        // alert(id)
+        if (id != "" && $("#search").val().length > 1) {
+            $.ajax({
+                url: '/Home/gettingProducts/' + id,
+                type: 'POST',
+                ContentType: "application/json;charset=UTF-8",
+                success: function (result) {
+                    $("#sul").remove();
+                    $("#dv").append("<ul id='sul'>")
+                    $("#sul").append(result)
+                    $("#dv").append("</ul>")
+                }
+            })
+        }
+        else {
+            $("#sul").remove();
+        }
+    })
+</script>
+
+
+@if (TempData["Message"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            var message = '@TempData["Message"]';
+            alert(message);
+        }
+    </script>
+}

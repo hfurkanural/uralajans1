@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApplication5.Models.MVVM.Portfolio>
+@{
+    ViewData["Title"] = "Portfolio";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+
+<!-- Mobile Menu start -->
+<div class="mobile__menu">
+    <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<!-- Mobile Menu end -->
+<!-- Breadcrumb section start -->
+<section class="breadcrumb__area" style="background-image: url(~/imgs/breadcrumb/portfolio.jpg);">
+    <div class="container">
+        <div class="breadcrumb__content">
+            <p class="cxu-words">Ana Sayfa - Portfolyo</p>
+            <h1 class="breadcrumb__title cxu-chars">Portfolyo</h1>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Portfolio section start -->
+<!-- Portfolio section start -->
+<section class="portfolio__area pt-140 pb-140">
+    <div class="container">
+        <div class="portfolio__top">
+            <div class="portfolio__title">
+                <h3 class="sec-title cxu-words">Son <br> Projelerimiz</h3>
+            </div>
+            <div class="portfolio__text cxu-lines">
+                <p>
+                    Fikirleriniz için sıradışı tasarımlı web siteleri, sorunsuz çalışan yazılımlar tasarlıyoruz ve büyümeniz için 
+                    e-ticaret danışmanlığı veriyoruz.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio__btm">
+        <div class="cxu--portfolio style-1">
+            <div class="swiper portfolio__slider">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+                        <div class="swiper-slide">
+                            <div class="portfolio-item cxu-fade" data-ease="power">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html"><img src="~/imgs/portfolio/@item.Photo" alt="Image" height="581" width="421"></a>
+                                </div>
+                                <h3 class="title"><a href="portfolio-details.html">@item.PortfolioName</a></h3>
+                                <ul>
+                                    <li><a href="http://www.@item.WebAddress" class="cxu-btn-border">@item.WebAddress</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+                <div class="navigation">
+                    <div class="btn-next"><img src="~/imgs/shape/arrow-7.svg" alt="Icon"></div>
+                    <div class="btn-prev"><img src="~/imgs/shape/arrow-6.svg" alt="Icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- Portfolio section end --><!-- Portfolio section end -->

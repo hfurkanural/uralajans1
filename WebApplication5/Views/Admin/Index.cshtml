@@ -1,0 +1,340 @@
+﻿@using WebApplication5.Models.MVVM
+@model MainPageModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    
+}
+
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Hoşgeldiniz <small>Tarih: @Html.Label(DateTime.Now.ToString("dd-MM-yyyy"))</small>
+</h3>
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>SON MESAJLAR
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <div class="table-toolbar">
+        </div>
+        <table class="table table-striped table-hover table-bordered display" id="">
+            <thead>
+                <tr>
+
+                    <th>
+                        GÖNDEREN İSMİ
+                    </th>
+
+                    <th>
+                        GÖNDEREN FİRMA
+                    </th>
+                    <th>
+                        E-POSTA
+                    </th>
+                    <th>
+                        TELEFON
+                    </th>
+                    <th>
+                        MESAJ
+                    </th>
+                    <th>
+                        TARİH
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Contact)
+                {
+                    <tr>
+
+                        <td>
+                            @item.SenderName
+                        </td>
+
+
+                        @if (item.CompanyName != null)
+                        {
+                            <td style="color:green;text-align:center;">
+                                <label>@item.CompanyName</label>
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="color:red;text-align:center;">
+                                <label>FİRMA BİLGİSİ GİRİLMEMİŞ</label>
+                            </td>
+                        }
+                        <td>
+                            @item.Email
+                        </td>
+                        <td>
+                            @item.Phone
+                        </td>
+                        <td>
+                            @item.Message
+                        </td>
+
+                        <td>
+                            @item.DateTime
+                        </td>
+
+
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>AYARLAR
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <div class="table-toolbar">
+        </div>
+        <table class="table table-striped table-hover table-bordered" id="">
+            <thead>
+                <tr>
+
+                    <th>
+                        TELEFON
+                    </th>
+
+                    <th>
+                        E-POSTA
+                    </th>
+                    <th>
+                        FACEBOOK
+                    </th>
+                    <th>
+                        TWITTER
+                    </th>
+                    <th>
+                        LINKEDIN
+                    </th>
+                    <th>
+                        INSTAGRAM
+                    </th>
+                    <th>
+                        ADRES
+                    </th>
+                    <th>
+                        İŞLEMLER
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Settings)
+                {
+                    <tr>
+
+                        <td>
+                            @item.PhoneNumber
+                        </td>
+                        <td>
+                            @item.Email
+                        </td>
+
+
+                        <td>
+                            @item.Facebook
+                        </td>
+                        <td>
+                            @item.Twitter
+                        </td>
+                        <td>
+                            @item.LinkedIn
+                        </td>
+
+                        <td>
+                            @item.Instagram
+                        </td>
+                        <td>
+                            @item.Address
+                        </td>
+                        <td>
+                            <a class="edit btn btn-warning btn-circle" asp-action="SettingEdit" asp-route-id="@item.SettingID">
+                                Düzenle
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>PORTFOLYO
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <div class="table-toolbar">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-group">
+                    </div>
+                    <a class="edit btn green circle" asp-action="PortfolioAdd" asp-route-id="">Yeni Portfolyo Ekle</a>
+
+                </div>
+
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered display" id="">
+            <thead>
+                <tr>
+
+                    <th>
+                        PORTFOLYO İSMİ
+                    </th>
+
+                    <th>
+                        PORTFOLYO ADRESİ
+                    </th>
+                    <th>
+                        PORTFOLYO FOTOĞRAFI
+                    </th>
+                    <th>
+                        AKTİF
+                    </th>
+                    <th>
+                        İŞLEMLER
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Portfolio)
+                {
+                    <tr>
+
+                        <td>
+                            @item.PortfolioName
+                        </td>
+
+                        <td>
+                            @item.WebAddress
+                        </td>
+                        <td>
+                            <img src="~/imgs/portfolio/@item.Photo" width="50" height="50" />
+                        </td>
+                        @if (item.Active == true)
+                        {
+                            <td style="color:green;text-align:center;">
+                                <label>AKTİF</label>
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="color:red;text-align:center;">
+                                <label>PASİF</label>
+                            </td>
+                        }
+                        <td>
+                            <a class="edit btn btn-warning btn-circle" asp-action="PortfolioEdit" asp-route-id="@item.PortfolioID">
+                                Düzenle
+                            </a>
+                            <a></a>
+                            <a class="delete btn btn-danger btn-circle" href="/Admin/PortfolioDelete/@item.PortfolioID">
+                                Sil
+                            </a>
+                        </td>
+
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>E-POSTA BÜLTENİ ÜYELERİ
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <div class="table-toolbar">
+            <div class="row">
+
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered display" id="">
+            <thead>
+                <tr>
+
+                    <th>
+                        E-POSTA ADRESİ
+                    </th>
+
+                    <th>
+                        AKTİF
+                    </th>
+               
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Newsletter)
+                {
+                    <tr>
+                   
+
+                        <td>
+                            @item.Email
+                        </td>
+                        @if (item.Active == true)
+                        {
+                            <td style="color:green;text-align:center;">
+                                <label>AKTİF</label>
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="color:red;text-align:center;">
+                                <label>PASİF</label>
+                            </td>
+                        }
+                    
+
+                      
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+
+<!-- END EXAMPLE TABLE PORTLET-->
+<!-- END PAGE CONTENT-->

@@ -1,0 +1,351 @@
+﻿@model WebApplication5.Models.MVVM.MainPageModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@ViewBag.Baslik</title>
+
+<!-- Fav Icon -->
+<link rel="icon" type="image/x-icon" href="~/imgs/logo/favicon.png">
+
+
+
+<!-- Mobile Menu start -->
+<div class="mobile__menu">
+    <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<!-- Mobile Menu end -->
+<!-- Hero section start -->
+<section class="hero__area-2">
+    <div class="container">
+        <div class="hero__content-2">
+            <h1 class="hero__title-2 hero-fade-2" data-ease="back" data-delay="0.5">
+                Yaratıcı Grafik Tasarım <br>
+                <img src="~/imgs/hero/4.png" alt="Image" class="hero-zoom" data-ease="bounce" data-delay="0.75">
+                & Yazılım Geliştirme.
+            </h1>
+
+            <div class="hero__info-2">
+                <div class="hero__shape-2">
+                    <img src="~/imgs/shape/arrow-8.png" alt="Icon" class="infinite-move">
+                </div>
+                <div class="hero__text-2">
+                    <p class="hero-fade" data-ease="back" data-delay="1">
+                        Ekibimiz grafik
+                        tasarım, web tasarım, yazılım hizmeti ve e-ticaret
+                        danışmanlığı alanında uzman kişilerden oluşmaktadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero__img-2">
+        <img src="~/imgs/hero/3.png" alt="Image" class="hero-fade" data-ease="back" data-delay="1.5">
+      @*   <a class="explore" href="#services">
+            Explore <span class="icon">
+                <i class="fa-solid fa-arrow-down infinite-move-3"></i>
+            </span>
+        </a> *@
+        <a class="modal__btn style-1 video-popup" href="https://www.youtube.com/watch?v=YLslsZuEaNE">
+            <img class="image" src="~/imgs/shape/play.svg" alt="Icon">
+            <div class="icon">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </a>
+    </div>
+</section>
+<!-- Hero section end -->
+<!-- Logo slider section start -->
+<section class="logo__slider-area-2">
+    <div class="swiper text__slider style-2 cxu-fade" data-ease="ease.out">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">İŞİNİZ</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">İÇİN</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">EN İYİ</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">DİJİTAL</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">ÇÖZÜMLER</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide">
+                    <div class="text">digital</div>
+                    <div class="shape"><img src="~/imgs/shape/star-4.svg" alt="Shape"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<!-- Logo slider section end -->
+<!-- Service section start -->
+<section class="service__area-2 pt-140 pb-140" id="services">
+    <div class="container">
+        <div class="service__top-2">
+            <h2 class="sec-title cxu-words">Hizmetlerimiz</h2>
+        </div>
+
+        <div class="cxu__service style-2">
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i1.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">E-Ticaret <br> Danışmanlığı </a></h3>
+                <p>Alanında uzman ekibimizden e-ticaret danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="0.6">
+                <div class="icon">
+                    <img src="~/imgs/service/i2.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">Web <br> Tasarım</a></h3>
+                <p>Alanında uzman ekibimizden web tasarım hizmeti alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="0.8">
+                <div class="icon">
+                    <img src="~/imgs/service/i3.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">Yazılım <br> Geliştirme</a></h3>
+                <p>Alanında uzman ekibimizden yazılım geliştirme hizmeti alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back" data-delay="1">
+                <div class="icon">
+                    <img src="~/imgs/service/i4.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">Grafik <br> Tasarım</a></h3>
+                <p>Alanında uzman ekibimizden grafik tasarım hizmeti alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i5.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">Sosyal Medya <br> Yönetimi</a></h3>
+                <p>Alanında uzman ekibimizden sosyal medya yönetimi danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="service-item cxu-fade" data-ease="back">
+                <div class="icon">
+                    <img src="~/imgs/service/i6.png" alt="Icon">
+                </div>
+                <h3 class="title"><a href="service-details.html">SEO  <br> Yönetimi</a></h3>
+                <p>Alanında uzman ekibimizden SEO yönetimi danışmanlığı alın.</p>
+                <div class="link">
+                    <a href="service-details.html">Daha Fazla Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service section end -->
+<!-- Portfolio section start -->
+<section class="portfolio__area-2 pt-140 pb-140">
+    <div class="container">
+        <div class="portfolio__top-2">
+            <div class="portfolio__title">
+                <h3 class="sec-title cxu-words">Son <br> Projelerimiz</h3>
+            </div>
+            <div class="portfolio__text cxu-fade" data-ease="back">
+                <a href="portfolio.html" class="cxu-btn-border">Başardığımız Tüm Projelerimiz <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="portfolio__btm-2">
+            <div class="cxu--portfolio style-2">
+                <div class="swiper portfolio__slider-2">
+                    <div class="swiper-wrapper cxu-fade" data-ease="back">
+                        @* <img src="~/imgs/portfolio/9.jpg" height="651" width="791"/> *@
+                        @foreach (var item in Model.Portfolio)
+                        {
+                            <div class="swiper-slide">
+                                <div class="portfolio-item">
+                                    <div class="thumb">
+
+                                        <img src="~/imgs/portfolio/@item.Photo" height="581" width="421" alt="Image" data-speed="0.9">
+
+                                    </div>
+                                    <ul>
+                                        @* <li><a href="#" class="cxu-btn-border">@item.PortfolioName</a></li> *@
+                                        <li><a href="https://@item.WebAddress" class="cxu-btn-border">@item.WebAddress</a></li>
+                                    </ul>
+                                    <h3 class="title">@item.PortfolioName</h3>
+                                </div>
+                            </div>
+                        }
+
+
+                        @* <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html">
+                                        <img src="~/imgs/portfolio/9.jpg" alt="Image"
+                                             data-speed="0.9">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="cxu-btn-border">Art Director</a></li>
+                                    <li><a href="#" class="cxu-btn-border">User Interface</a></li>
+                                </ul>
+                                <h3 class="title"><a href="portfolio-details.html">Custom UX Design</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html">
+                                        <img src="~/imgs/portfolio/8.jpg" alt="Image"
+                                             data-speed="0.9">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="cxu-btn-border">Art Director</a></li>
+                                    <li><a href="#" class="cxu-btn-border">User Interface</a></li>
+                                </ul>
+                                <h3 class="title"><a href="portfolio-details.html">Custom UX Design</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html">
+                                        <img src="~/imgs/portfolio/9.jpg" alt="Image"
+                                             data-speed="0.9">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="cxu-btn-border">Art Director</a></li>
+                                    <li><a href="#" class="cxu-btn-border">User Interface</a></li>
+                                </ul>
+                                <h3 class="title"><a href="portfolio-details.html">Reow - Illustration</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html">
+                                        <img src="~/imgs/portfolio/8.jpg" alt="Image"
+                                             data-speed="0.9">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="cxu-btn-border">Art Director</a></li>
+                                    <li><a href="#" class="cxu-btn-border">User Interface</a></li>
+                                </ul>
+                                <h3 class="title"><a href="portfolio-details.html">Custom UX Design</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="portfolio-details.html">
+                                        <img src="~/imgs/portfolio/9.jpg" alt="Image"
+                                             data-speed="0.9">
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="cxu-btn-border">Art Director</a></li>
+                                    <li><a href="#" class="cxu-btn-border">User Interface</a></li>
+                                </ul>
+                                <h3 class="title"><a href="portfolio-details.html">Reow - Illustration</a></h3>
+                            </div>
+                        </div> *@
+                    </div>
+                    <div class="navigation cxu-fade" data-ease="back">
+                        <div class="btn-next"><img src="~/imgs/shape/arrow-7.svg" alt="Icon"></div>
+                        <div class="btn-prev"><img src="~/imgs/shape/arrow-6.svg" alt="Icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio section end -->
+<!-- Testimonial section start -->
+<!-- Testimonial section end -->
+<!-- Counter area start -->
+<section class="counter__area pt-140 pb-140">
+    <div class="container">
+        <div class="counter__content">
+            <h2 class="sec-title cxu-words">Dijitaldeki varlığınızı <br> görünür ve <br> güçlü hale getiriyoruz</h2>
+            <p class="cxu-lines">
+                İzmir merkezli firmamız, alanında uzman ekibimiz ile satıcı ve müşteri arasındaki güçlü köprüyü sağlam stratejilerle kuruyoruz
+            </p>
+            <div class="counter__list">
+                <div class="counter__item style-1 cxu-fade" data-ease="back" data-delay="0.5">
+                    <div class="counter-active number">25+</div>
+                    <p>Takım Arkadaşımız </p>
+                </div>
+                <div class="counter__item style-1 cxu-fade" data-ease="back" data-delay="0.75">
+                    <div class="counter-active number">7k+</div>
+                    <p>Bizimle Çalışan Global Markalar</p>
+                </div>
+                <div class="counter__item style-1 cxu-fade" data-ease="back" data-delay="1">
+                    <div class="counter-active number">56+</div>
+                    <p>Yaratıcı Projeler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="~/imgs/shape/arrow-10.png" alt="Shape" class="shape infinite-move">
+    <img src="~/imgs/counter/1.png" alt="Image" class="counter__image cxu-fade" data-ease="bounce"
+         data-speed="0.9">
+</section>
+<!-- Counter area end -->
+<!-- Team area start -->
+<!-- Team area end -->
+<!-- CTA section start -->
+<section class="cta__area cta__area-2 pt-150 pb-150">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="sec-title cxu-words">GELİN, BİRLİKTE İNANILMAZ PROJELERE İMZA ATALIM</h2>
+            <a href="contact.html" class="cxu-btn-primary cxu-fade" data-ease="bounce">
+                Bizimle İletişime Geçin <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <img src="~/imgs/shape/cta.png" alt="Shape" class="shape" data-speed="0.89">
+    <img src="~/imgs/shape/cta-2.png" alt="Shape" class="shape-2" data-speed="0.92">
+    <img src="~/imgs/shape/cta-3.png" alt="Shape" class="shape-3" data-speed="0.9">
+    <img src="~/imgs/shape/cta-4.png" alt="Shape" class="shape-4">
+</section>
+<!-- CTA section end -->

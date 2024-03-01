@@ -1,0 +1,117 @@
+﻿@model WebApplication5.Models.MVVM.Contact
+@{
+    ViewData["Title"] = "ContactLight";
+    Layout = "~/Views/Shared/LightLayout.cshtml";
+}
+
+<!-- Mobile Menu start -->
+<div class="mobile__menu">
+    <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<!-- Mobile Menu end -->
+<!-- Breadcrumb section start -->
+<section class="breadcrumb__area" style="background-image: url(~/imgs/breadcrumb/service.jpg);">
+    <div class="container">
+        <div class="breadcrumb__content">
+            <p class="cxu-words">Ana Sayfa - Bize Ulaşın</p>
+            <h1 class="breadcrumb__title cxu-chars">Bize Ulaşın</h1>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Contact section start -->
+<section class="contact__area pt-140 pb-140">
+    <div class="container">
+        <div class="contact__wrapper">
+            <div class="contact__left">
+                <h1 class="sec-title-2 cxu-words">Gelin, <br> projenizi oluşturalım</h1>
+                <p class="cxu-lines">
+                    Her zaman yardım etmeye hazırız. Arayın, e-posta veya mesaj gönderin.
+                </p>
+                <div class="box-wrapper cxu-fade" data-ease="back">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <p>Bizi Arayın</p>
+                            <a href="tel:@ViewBag.telephone">@ViewBag.telephone</a>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <p>Bize E-posta Gönderin</p>
+                            <a href="mailto:@ViewBag.email">@ViewBag.email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-wrapper-2 cxu-fade" data-ease="back">
+                    <div class="social-share">
+                        <div class="title">Bizi Sosyal Medyada Takip Edin</div>
+                        <ul class="social-media hover-1">
+                            <li>
+                                <a href="https://www.@ViewBag.facebook" target="_blank">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li><a href="https://@ViewBag.twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li>
+                                <a href="https://www.@ViewBag.linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.@ViewBag.instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="location">
+                        <div class="title">Adresimiz</div>
+                        <p>@ViewBag.address</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__right cxu-fade" data-ease="back">
+                <div class="contact__form">
+                    <h3 class="title">Bize Mesaj Gönderin </h3>
+                    <form action="/Home/Contact" method="post">
+                        <input type="text" placeholder="Tam İsminiz" asp-for="SenderName" required>
+                        <input type="text" placeholder="Firma İsmi" asp-for="CompanyName">
+                        <input type="email" placeholder="E-posta Adresiniz" asp-for="Email" required>
+                        <input type="tel" placeholder="Telefon numaranız" asp-for="Phone" required>
+                        <textarea asp-for="Message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                        <button type="submit" class="submit cxu-btn-primary">
+                            Gönder <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact section end -->
+<!-- CTA section start -->
+@* <section class="cta__area pt-150 pb-150">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="sec-title cxu-lines">GELİN, BİRLİKTE İNANILMAZ PROJELERE İMZA ATALIM</h2>
+            <div class="cxu-fade" data-ease="bounce">
+                <a class="modal__btn style-2" href="contact.html">
+                    <img src="~/imgs/shape/contact.png" alt="Icon" class="image">
+                    <div class="icon">
+                        <div class="icon-1"><img src="~/imgs/shape/arrow-4.svg" alt="Icon"></div>
+                        <div class="icon-2"><img src="~/imgs/shape/arrow-4.svg" alt="Icon"></div>
+                    </div>
+                </a>
+            </div>
+            <img src="~/imgs/shape/cta-5.png" alt="Shape" class="shape-5" data-speed="0.9">
+        </div>
+    </div>
+
+    <img src="~/imgs/shape/cta.png" alt="Shape" class="shape" data-speed="0.89">
+    <img src="~/imgs/shape/cta-2.png" alt="Shape" class="shape-2" data-speed="0.9">
+    <img src="~/imgs/shape/cta-3.png" alt="Shape" class="shape-3" data-speed="0.95">
+    <img src="~/imgs/shape/cta-4.png" alt="Shape" class="shape-4">
+</section>
+ *@<!-- CTA section end -->
